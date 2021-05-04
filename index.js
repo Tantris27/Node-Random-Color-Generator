@@ -12,7 +12,7 @@ const str = `##############################
 ##############################
 ##############################`;
 
-if (process.argv[2] === undefined) {
+if (!process.argv[2]) {
   console.log(chalk.hex(colour)(str));
 } else if (process.argv[3] === 'light') {
   colour = randomColor({
@@ -26,7 +26,7 @@ if (process.argv[2] === undefined) {
     hue: process.argv[2],
   });
   console.log(chalk.hex(colour)(str));
-} else if (chalk.keyword(process.argv[2])) {
+} else if (process.argv[2]) {
   colour = randomColor({
     luminosity: 'random',
     hue: process.argv[2],
