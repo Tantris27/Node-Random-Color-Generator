@@ -15,4 +15,4 @@ const str = `##############################
 ##############################
 ##############################`;
 
-console.log(chalk.hex(colour)(str));
+console.log(chalk.bold.hex(colour)(str));
